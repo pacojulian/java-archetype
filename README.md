@@ -25,15 +25,6 @@ technologies like:
 # Project Structure
 ``` bash
 .
-├── README.md
-├── build.gradle
-├── gradle
-│   └── wrapper
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
-├── gradlew
-├── gradlew.bat
-├── settings.gradle
 └── src
     ├── main
     │   ├── java
@@ -41,28 +32,33 @@ technologies like:
     │   │       └── example
     │   │           └── archetype
     │   │               ├── ArchetypeApplication.java
-    │   │               ├── in
-    │   │               │   ├── UsersController.java
-    │   │               │   └── dto
-    │   │               │       ├── request
-    │   │               │       │   └── CreateUserRequestDTO.java
-    │   │               │       └── response
-    │   │               │           └── CreateUserResponseDTO.java
-    │   │               └── out
-    │   │                   ├── command
-    │   │                   │   ├── Command.java
-    │   │                   │   └── CreateUserCommand.java
-    │   │                   ├── entity
-    │   │                   │   └── R2BCUser.java
-    │   │                   ├── handler
-    │   │                   │   ├── CreateUserHandler.java
-    │   │                   │   └── Handler.java
-    │   │                   ├── mapper
-    │   │                   │   └── UserMapper.java
-    │   │                   ├── model
-    │   │                   │   └── User.java
-    │   │                   └── repository
-    │   │                       └── R2BCPersonRepository.java
+    │   │               ├── adapter
+    │   │               │   ├── in
+    │   │               │   │   ├── UsersController.java
+    │   │               │   │   └── dto
+    │   │               │   │       ├── request
+    │   │               │   │       │   └── CreateUserRequestDTO.java
+    │   │               │   │       └── response
+    │   │               │   │           └── CreateUserResponseDTO.java
+    │   │               │   └── out
+    │   │               │       ├── dto
+    │   │               │       ├── entity
+    │   │               │       │   └── R2BCUser.java
+    │   │               │       ├── exception
+    │   │               │       ├── mapper
+    │   │               │       │   └── UserMapper.java
+    │   │               │       └── repository
+    │   │               │           └── R2BCPersonRepository.java
+    │   │               ├── command
+    │   │               │   ├── Command.java
+    │   │               │   └── CreateUserCommand.java
+    │   │               ├── handler
+    │   │               │   ├── CreateUserHandler.java
+    │   │               │   └── Handler.java
+    │   │               ├── model
+    │   │               │   └── User.java
+    │   │               └── port
+    │   │                   └── UserRepository.java
     │   └── resources
     │       └── application.yml
     └── test
@@ -71,6 +67,7 @@ technologies like:
                 └── example
                     └── archetype
                         └── ArchetypeApplicationTests.java
+
 ```
 
 
