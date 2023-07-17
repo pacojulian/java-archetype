@@ -1,0 +1,42 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.1'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'com.adarshr.test-logger' version '3.2.0'
+	id 'com.diffplug.spotless' version '6.18.0'
+}
+
+group = 'com.example.archetype'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+jar{
+	enabled = false
+}
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc:3.0.4'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	compileOnly 'org.projectlombok:lombok'
+
+	runtimeOnly 'com.google.cloud.sql:postgres-socket-factory:1.11.0'
+	implementation 'org.postgresql:r2dbc-postgresql'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

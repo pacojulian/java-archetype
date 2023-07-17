@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: user
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/user
+    username: postgres
+    password: postgres
+    pool:
+      initial-size: 2
+      max-size: 10
+      max-idle-time: 30m
+server:
+  port: 8080
+  security:
+    user:
+      name: admin
+      password: admin
