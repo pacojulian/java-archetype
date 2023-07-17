@@ -24,16 +24,6 @@ technologies like:
 ```
 # Project Structure
 ``` bash
-.
-├── README.md
-├── build.gradle
-├── gradle
-│   └── wrapper
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
-├── gradlew
-├── gradlew.bat
-├── settings.gradle
 └── src
     ├── main
     │   ├── java
@@ -41,6 +31,7 @@ technologies like:
     │   │       └── example
     │   │           └── archetype
     │   │               ├── ArchetypeApplication.java
+    │   │               ├── LiquiBaseInit.java
     │   │               ├── in
     │   │               │   ├── UsersController.java
     │   │               │   └── dto
@@ -64,13 +55,25 @@ technologies like:
     │   │                   └── repository
     │   │                       └── R2BCPersonRepository.java
     │   └── resources
-    │       └── application.yml
+    │       ├── application-dbinit.yml
+    │       ├── application.yml
+    │       └── db
+    │           ├── changelog-master.xml
+    │           └── postgresql
+    │               ├── changelog
+    │               │   └── 01-initial-db.xml
+    │               └── sql
+    │                   ├── ddl
+    │                   │   └── 01-db-init.sql
+    │                   └── dml
+    │                       └── 01-inserts.sql
     └── test
         └── java
             └── com
                 └── example
                     └── archetype
                         └── ArchetypeApplicationTests.java
+
 ```
 
 

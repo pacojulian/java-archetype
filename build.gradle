@@ -24,6 +24,11 @@ repositories {
 }
 
 dependencies {
+	//liquibase
+	runtimeOnly 'org.liquibase:liquibase-core:4.19.0'
+
+	//postgresql
+	runtimeOnly 'org.postgresql:postgresql:42.5.4'
 	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc:3.0.4'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	compileOnly 'org.projectlombok:lombok'

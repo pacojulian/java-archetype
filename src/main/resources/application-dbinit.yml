@@ -1,0 +1,11 @@
+spring:
+  application:
+    user: user-init
+  liquibase:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/postgres
+    user: postgres
+    password: postgres
+    change-log: classpath:db/changelog-master.xml
+    contexts: 'dev,auth,prod'
+    # context: 'local'

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <!--Change Set -->
+   <changeSet id="01" author="pacojulian">
+       <sqlFile path="classpath:/db/postgresql/sql/ddl/01-db-init.sql" />
+       <comment> Contains the script to execute </comment>
+   </changeSet>
+
+    <!--Change Set that includes context -->
+    <changeSet id="01" author="pacojulian" context="local">
+        <sqlFile path="classpath:/db/postgresql/sql/dml/01-inserts.sql" />
+        <comment> Contains the script to execute only with context</comment>
+    </changeSet>
+
+</databaseChangeLog>
