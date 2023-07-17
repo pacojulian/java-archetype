@@ -1,4 +1,4 @@
-package com.example.archetype.in.dto.request;
+package com.example.archetype.adapter.in.dto.request;
 
 public record CreateUserRequestDTO (
         String name,

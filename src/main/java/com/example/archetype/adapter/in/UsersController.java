@@ -1,9 +1,9 @@
-package com.example.archetype.in;
+package com.example.archetype.adapter.in;
 
-import com.example.archetype.in.dto.request.CreateUserRequestDTO;
-import com.example.archetype.in.dto.response.CreateUserResponseDTO;
-import com.example.archetype.out.command.CreateUserCommand;
-import com.example.archetype.out.handler.CreateUserHandler;
+import com.example.archetype.adapter.in.dto.request.CreateUserRequestDTO;
+import com.example.archetype.adapter.in.dto.response.CreateUserResponseDTO;
+import com.example.archetype.command.CreateUserCommand;
+import com.example.archetype.handler.CreateUserHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
-package com.example.archetype.out.handler;
+package com.example.archetype.handler;
 
-import com.example.archetype.out.command.Command;
+import com.example.archetype.command.Command;
 
 @FunctionalInterface
 public interface Handler <T extends Command, R>{
