@@ -1,4 +1,4 @@
-package com.example.archetype.out.command;
+package com.example.archetype.command;
 
 import lombok.Builder;
 import lombok.Data;

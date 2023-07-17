@@ -1,4 +1,4 @@
-package com.example.archetype.in.dto.response;
+package com.example.archetype.adapter.in.dto.response;
 
 import lombok.Builder;
 

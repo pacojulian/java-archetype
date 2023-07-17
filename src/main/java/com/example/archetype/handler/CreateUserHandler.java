@@ -1,7 +1,7 @@
-package com.example.archetype.out.handler;
+package com.example.archetype.handler;
 
-import com.example.archetype.in.dto.response.CreateUserResponseDTO;
-import com.example.archetype.out.command.CreateUserCommand;
+import com.example.archetype.adapter.in.dto.response.CreateUserResponseDTO;
+import com.example.archetype.command.CreateUserCommand;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 

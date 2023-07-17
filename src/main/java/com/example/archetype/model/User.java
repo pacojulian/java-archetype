@@ -1,4 +1,4 @@
-package com.example.archetype.out.model;
+package com.example.archetype.model;
 
 public class User {
     private String name;

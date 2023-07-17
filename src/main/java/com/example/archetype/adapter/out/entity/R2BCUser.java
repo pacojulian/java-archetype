@@ -1,4 +1,4 @@
-package com.example.archetype.out.entity;
+package com.example.archetype.adapter.out.entity;
 
 import lombok.Builder;
 import lombok.Data;
