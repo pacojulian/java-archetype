@@ -1,69 +1,33 @@
-# How it Works
-The aim of this project is to implement a command-message
-pattern using Spring Boot using Spring WebFlux and R2DBC.
+# GraphQl Configuration
 
-This Project also includes how to implement Hexagonal architecture.
+## Description
+The intention fo this project is to use GraphQl 
+with SpringBoot 
+
+`Note`: we are using the liquidbase config for the database migrations.
+so its easier to have a local environment ready.
+
+
+
+
+# Project Structure
+``` bash
+```
+
 
 
 # How to test it locally
 
-``` bash
-./gradlew clean build bootRun
-```
-# Project Structure
-``` bash
-.
-└── src
-    ├── main
-    │   ├── java
-    │   │   └── com
-    │   │       └── example
-    │   │           └── archetype
-    │   │               ├── ArchetypeApplication.java
-    │   │               ├── adapter
-    │   │               │   ├── in
-    │   │               │   │   ├── UsersController.java
-    │   │               │   │   └── dto
-    │   │               │   │       ├── request
-    │   │               │   │       │   └── CreateUserRequestDTO.java
-    │   │               │   │       └── response
-    │   │               │   │           └── CreateUserResponseDTO.java
-    │   │               │   └── out
-    │   │               │       ├── dto
-    │   │               │       ├── entity
-    │   │               │       │   └── R2BCUser.java
-    │   │               │       ├── exception
-    │   │               │       ├── mapper
-    │   │               │       │   └── UserMapper.java
-    │   │               │       └── repository
-    │   │               │           └── R2BCPersonRepository.java
-    │   │               ├── command
-    │   │               │   ├── Command.java
-    │   │               │   └── CreateUserCommand.java
-    │   │               ├── handler
-    │   │               │   ├── CreateUserHandler.java
-    │   │               │   └── Handler.java
-    │   │               ├── model
-    │   │               │   └── User.java
-    │   │               └── port
-    │   │                   └── UserRepository.java
-    │   └── resources
-    │       └── application.yml
-    └── test
-        └── java
-            └── com
-                └── example
-                    └── archetype
-                        └── ArchetypeApplicationTests.java
-
-```
-
-
-``` bash
-
-## Prerequisites
-- Docker
+* Docker
 ``` bash
 docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 ```
 
+* Generate the jar file
+``` bash
+./gradlew clean build 
+```
+* Run the application to run the migrations.
+``` bash
+java -jar ./build/libs/archetype-0.0.1-SNAPSHOT.jar dbinit
+```
