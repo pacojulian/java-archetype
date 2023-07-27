@@ -1,0 +1,44 @@
+type Query {
+#    Users:
+    getUser(email:String):User
+    getAllUsers:[User]
+#    Account
+    getAccountById(accountId:String):Account
+}
+
+type Account{
+    accountId:String
+    productDetail:String
+    contact:Contact
+    history:[History]
+    notifications:notifications
+    address:[Address]
+
+}
+type Contact{
+    accountId:String
+    name:String
+    lastName:String
+}
+type History{
+    accountId:String
+    transactionId:String
+    amount:Int
+}
+
+type notifications{
+    accountId:String
+    notifications:Boolean
+}
+type Address{
+    accountId:String
+    street:String
+    city:String
+    state:String
+    zipCode:String
+}
+
+type User {
+    name:String
+    email:String
+}

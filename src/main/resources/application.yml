@@ -12,7 +12,3 @@ spring:
       max-idle-time: 30m
 server:
   port: 8080
-  security:
-    user:
-      name: admin
-      password: admin

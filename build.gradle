@@ -10,6 +10,7 @@ group = 'com.example.archetype'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
+
 jar{
 	enabled = false
 }
@@ -21,11 +22,17 @@ configurations {
 
 repositories {
 	mavenCentral()
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }  // Spring milestones
+	maven { url 'https://repo.spring.io/snapshot' }   // Spring snapshots
 }
-
 dependencies {
 	//liquibase
 	runtimeOnly 'org.liquibase:liquibase-core:4.19.0'
+
+	// graphql
+//	implementation 'org.springframework.boot:spring-boot-starter-graphql:3.0.0-M5'
+	implementation 'org.springframework.experimental:graphql-spring-boot-starter:1.0.0-M3'
 
 	//postgresql
 	runtimeOnly 'org.postgresql:postgresql:42.5.4'
