@@ -24,6 +24,10 @@ repositories {
 }
 
 dependencies {
+	//Redis
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive:3.1.2'
+	implementation 'org.springframework.integration:spring-integration-redis'
+
 	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc:3.0.4'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	compileOnly 'org.projectlombok:lombok'
