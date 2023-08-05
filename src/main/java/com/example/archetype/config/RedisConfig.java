@@ -12,22 +12,12 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Configuration
 public class RedisConfig {
 
-//    @Bean
-//    public ReactiveRedisTemplate<String, RedisUser> reactiveRedisTemplate(ReactiveRedisConnectionFactory factory) {
-//        Jackson2JsonRedisSerializer<RedisUser> serializer = new Jackson2JsonRedisSerializer<>(RedisUser.class);
-//        RedisSerializationContext.RedisSerializationContextBuilder<String, RedisUser> builder =
-//                RedisSerializationContext.newSerializationContext(new StringRedisSerializer());
-//        RedisSerializationContext<String, RedisUser> context = builder.value(serializer).build();
-//        return new ReactiveRedisTemplate<>(factory, context);
-//    }
-
     @Bean
-    public <T> ReactiveRedisTemplate<String, T> reactiveRedisTemplate(
-            ReactiveRedisConnectionFactory factory, Class<T> entityType) {
-        Jackson2JsonRedisSerializer<T> serializer = new Jackson2JsonRedisSerializer<>(entityType);
-        RedisSerializationContext.RedisSerializationContextBuilder<String, T> builder =
+    public ReactiveRedisTemplate<String, RedisUser> reactiveRedisTemplate(ReactiveRedisConnectionFactory factory) {
+        Jackson2JsonRedisSerializer<RedisUser> serializer = new Jackson2JsonRedisSerializer<>(RedisUser.class);
+        RedisSerializationContext.RedisSerializationContextBuilder<String, RedisUser> builder =
                 RedisSerializationContext.newSerializationContext(new StringRedisSerializer());
-        RedisSerializationContext<String, T> context = builder.value(serializer).build();
+        RedisSerializationContext<String, RedisUser> context = builder.value(serializer).build();
         return new ReactiveRedisTemplate<>(factory, context);
     }
 }
