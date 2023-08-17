@@ -31,12 +31,12 @@ public class GraphQlUserController {
         List<Address> addressList = List.of(Address.builder().accountId("0001F").street("1234 Main St").city("Toluca").state("Mexico").zipCode("52145").build());
         Notifications notifications = Notifications.builder().accountId("0001F").notifications(true).build();
         System.out.println(addressList);
-       return  Mono.just(Account.builder().accountId("0001F").productDetail("Cuenta de Debito")
-                       .address(addressList)
-                       .history(historyList)
-                       .contact(contact)
-                       .notifications(notifications)
-               .build());
+        return  Mono.just(Account.builder().accountId("0001F").productDetail("Cuenta de Debito")
+                .address(addressList)
+                .history(historyList)
+                .contact(contact)
+                .notifications(notifications)
+                .build());
 
     }
 

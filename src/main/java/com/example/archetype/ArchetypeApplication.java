@@ -14,11 +14,11 @@ public class ArchetypeApplication {
 	public static void main(String[] args) {
 
 		if(Arrays.stream(args).anyMatch("dbinit"::equals)) {
-		new SpringApplicationBuilder(LiquiBaseInit.class)
-				.contextFactory(ApplicationContextFactory.ofContextClass(AnnotationConfigApplicationContext.class))
-				.profiles("dbinit")
-				.run(args);
-		return;
+			new SpringApplicationBuilder(LiquiBaseInit.class)
+					.contextFactory(ApplicationContextFactory.ofContextClass(AnnotationConfigApplicationContext.class))
+					.profiles("dbinit")
+					.run(args);
+			return;
 		}
 		SpringApplication.run(ArchetypeApplication.class, args);
 	}
